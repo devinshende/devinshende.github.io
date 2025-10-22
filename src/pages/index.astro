@@ -1,0 +1,97 @@
+---
+const pageTitle = "Home";
+import "../styles/global.css";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+		/>
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pageTitle}</title>
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav
+			class="navbar has-shadow is-white"
+			role="navigation"
+			aria-label="main navigation"
+		>
+			<div class="container">
+				<div class="navbar-brand">
+					<a
+						class="navbar-item has-text-link has-text-weight-bold"
+						href="/">Devin Shende</a
+					>
+				</div>
+				<div class="navbar-menu is-active">
+					<div class="navbar-end">
+						<a class="navbar-item has-text-link is-active" href="/"
+							>Home</a
+						>
+						<a class="navbar-item has-text-link" href="/about"
+							>About</a
+						>
+						<a class="navbar-item has-text-link" href="/resume"
+							>Resume</a
+						>
+						<a class="navbar-item has-text-link" href="/projects"
+							>Projects</a
+						>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Hero Section -->
+		<section class="hero is-dark">
+			<div class="hero-body">
+				<div class="container">
+					<div class="columns is-vcentered">
+						<!-- Left Column: Text -->
+						<div class="column is-half">
+							<h3 class="subtitle is-4 has-text-grey-light">
+								HEY! I AM
+							</h3>
+							<h1 class="title is-1 has-text-weight-bold">
+								Devin Shende
+							</h1>
+							<h3 class="subtitle is-5 has-text-grey-lighter">
+								I'm a NLP Master's Student at UCSC
+							</h3>
+						</div>
+
+						<!-- Right Column: Image -->
+						<!-- Right Column: Image -->
+						<div class="column is-half has-text-centered">
+							<figure class="image is-inline-block">
+								<img
+									src="/devin.JPG"
+									alt="Devin Shende"
+									style="border-radius: 8px; height: auto; max-width: 100%;"
+								/>
+							</figure>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Optional Content Section -->
+		<section class="section">
+			<div class="container">
+				<h2 class="title is-3 has-text-link">Welcome</h2>
+				<p class="content is-medium">
+					Thanks for visiting my site! Explore the links above to
+					learn more about me, my resume, and the projects I’m working
+					on.
+				</p>
+			</div>
+		</section>
+	</body>
+</html>

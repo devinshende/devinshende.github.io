@@ -1,0 +1,103 @@
+---
+const pageTitle = "About";
+// import "../styles/global.css";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+        />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{pageTitle}</title>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav
+            class="navbar has-shadow is-white"
+            role="navigation"
+            aria-label="main navigation"
+        >
+            <div class="container">
+                <!-- Left side -->
+                <div class="navbar-brand">
+                    <a
+                        class="navbar-item has-text-link has-text-weight-bold"
+                        href="/">Devin Shende</a
+                    >
+                </div>
+                <!-- Right side -->
+                <div class="navbar-menu is-active">
+                    <div class="navbar-end">
+                        <a class="navbar-item has-text-link" href="/">Home</a>
+                        <a
+                            class="navbar-item has-text-link is-active"
+                            href="/about">About</a
+                        >
+                        <a class="navbar-item has-text-link" href="/resume"
+                            >Resume</a
+                        >
+                        <a class="navbar-item has-text-link" href="/projects"
+                            >Projects</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero is-dark is-medium">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="title is-1 has-text-weight-bold">About Me</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="section">
+            <div class="container content">
+                <aside class="message is-info">
+                    <div class="message-body">
+                        I'm a 1st year M.S. Student at the University of
+                        California Santa Cruz studying Natural Language
+                        Processing.
+                        <br /><br />
+                        I received my Bachelor of Science from UCSC with a major
+                        in Computer Science and a minor in Spanish Studies. During
+                        my undergrad, I completed the College Scholars Program and
+                        served as Head Climbing Coach for two years in the nonprofit
+                        Santa Cruz Climbs
+                        <br /><br />
+                        My research interests are related to applying Natural Language
+                        Processing techniques to solve environmental challenges such
+                        as conservation, climate change, and energy efficient systems.
+                        I love programming, climbing, traveling, slacklining and
+                        spending time outdoors.
+                    </div>
+                </aside>
+
+                <!-- Contact Section -->
+                <h2 class="title is-3 has-text-link mt-6">Contact</h2>
+                <p>
+                    <strong>Email:</strong>
+                    <a
+                        href="mailto:devin.s.shende@gmail.com"
+                        class="has-text-link">devin.s.shende@gmail.com</a
+                    >
+                </p>
+                <p>
+                    <strong>LinkedIn:</strong>
+                    <a
+                        href="https://www.linkedin.com/in/devin-shende-a66506367/"
+                        class="has-text-link">My LinkedIn</a
+                    >
+                </p>
+            </div>
+        </section>
+    </body>
+</html>

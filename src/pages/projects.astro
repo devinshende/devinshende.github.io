@@ -1,0 +1,115 @@
+---
+const pageTitle = "Projects";
+
+// Example project list (replace with real projects later)
+const projects = [
+    {
+        title: "EventMap",
+        description:
+            "Mobile Application",
+        link: "#",
+    },
+    {
+        title: "Hurricane Prediction",
+        description:
+            "Using ML to predict hurricanes",
+        link: "#",
+    },
+    {
+        title: "Other project",
+        description:
+            "here is soemthing",
+        link: "#",
+    },
+];
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+        />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{pageTitle}</title>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav
+            class="navbar has-shadow is-white"
+            role="navigation"
+            aria-label="main navigation"
+        >
+            <div class="container">
+                <div class="navbar-brand">
+                    <a
+                        class="navbar-item has-text-link has-text-weight-bold"
+                        href="/">Devin Shende</a
+                    >
+                </div>
+                <div class="navbar-menu is-active">
+                    <div class="navbar-end">
+                        <a class="navbar-item has-text-link" href="/">Home</a>
+                        <a class="navbar-item has-text-link" href="/about"
+                            >About</a
+                        >
+                        <a class="navbar-item has-text-link" href="/resume"
+                            >Resume</a
+                        >
+                        <a
+                            class="navbar-item has-text-link is-active"
+                            href="/projects">Projects</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero is-dark is-medium">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="title is-1 has-text-weight-bold">Projects</h1>
+                    <h2 class="subtitle is-4 has-text-grey-lighter">
+                        Some of my work and experiments
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section">
+            <div class="container">
+                <div class="columns is-multiline">
+                    {
+                        projects.map((project) => (
+                            <div class="column is-4">
+                                <div class="card">
+                                    <div class="card-content">
+                                        <p class="title is-4 has-text-link">
+                                            {project.title}
+                                        </p>
+                                        <p class="content">
+                                            {project.description}
+                                        </p>
+                                    </div>
+                                    <footer class="card-footer">
+                                        <a
+                                            href={project.link}
+                                            class="card-footer-item has-text-link"
+                                        >
+                                            View Project
+                                        </a>
+                                    </footer>
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

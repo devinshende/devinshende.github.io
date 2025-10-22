@@ -1,0 +1,82 @@
+---
+const pageTitle = "Resume";
+// We no longer need to import the .md file
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+        />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{pageTitle}</title>
+    </head>
+    <body>
+        <nav
+            class="navbar has-shadow is-white"
+            role="navigation"
+            aria-label="main navigation"
+        >
+            <div class="container">
+                <div class="navbar-brand">
+                    <a
+                        class="navbar-item has-text-link has-text-weight-bold"
+                        href="/">Devin Shende</a
+                    >
+                </div>
+                <div class="navbar-menu is-active">
+                    <div class="navbar-end">
+                        <a class="navbar-item has-text-link" href="/">Home</a>
+                        <a class="navbar-item has-text-link" href="/about"
+                            >About</a
+                        >
+                        <a
+                            class="navbar-item has-text-link is-active"
+                            href="/resume">Resume</a
+                        >
+                        <a class="navbar-item has-text-link" href="/projects"
+                            >Projects</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="hero is-dark is-medium">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="title is-1 has-text-weight-bold">Resume</h1>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container content">
+                <div class="has-text-centered" style="margin-bottom: 1.5rem;">
+                    <a 
+                        href="/resume.pdf" 
+                        download="DevinShende_Resume.pdf" 
+                        class="button is-link is-large"
+                    >
+                        Download Resume (PDF)
+                    </a>
+                </div>
+
+                <iframe
+                    src="/resume.pdf"
+                    title={pageTitle}
+                    width="100%"
+                    style="border: none; min-height: 80vh;"
+                >
+                    Your browser does not support embedded PDFs. 
+                    Please <a href="/resume.pdf">download the PDF</a> to view it.
+                </iframe>
+                
+                </div>
+        </section>
+    </body>
+</html>

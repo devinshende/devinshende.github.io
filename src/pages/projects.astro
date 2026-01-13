@@ -1,24 +1,33 @@
 ---
 const pageTitle = "Projects";
 
-// Example project list (replace with real projects later)
+import "../styles/global.css";
+
+// Expanded project list with metadata, dates and stack
 const projects = [
     {
         title: "EventMap",
+        icon: "/appstore.png",
+        dates: "Jun 2024 – Present",
+        stack: "Flutter",
         description:
-            "Mobile Application",
+            "I co-founded EventMap and served as lead developer on a four-person team building a mobile app to discover ongoing events across campus. We incorporated EventMap LLC, filed a patent, and published the app on the Apple App Store. I led the Flutter implementation, feature planning, and user testing, building geolocation-based discovery and RSVP flows to help students find activities quickly.",
         link: "#",
     },
     {
-        title: "Hurricane Prediction",
+        title: "Hurricane Damage",
+        dates: "Oct 2024 – Dec 2024",
+        stack: "Python, Keras",
         description:
-            "Using ML to predict hurricanes",
+            "On a five-person research team I worked to improve damage classification in satellite imagery after Hurricane Katrina. I designed and trained CNN, ResNet, and ViT models for before-and-after binary classification, augmented the original Kaggle dataset with additional imagery and auxiliary data, and experimented with ensemble techniques to raise robustness and accuracy.",
         link: "#",
     },
     {
         title: "NewSense",
+        dates: "Nov 2025",
+        stack: "PyTorch, spaCy, FastAPI, GSAP",
         description:
-            "A focus mode browser designed to actually confuse you and make it harder to read thanks to the power of LLMs. Designed for the UCSC NLP Dumbathon 2025",
+            "NewSense won First Place in the UCSC NLP Dumbathon. We rapidly built a playful full-stack prototype that combined the Gemini API for text transformation with LLaMA for keyword-based redaction. I helped ship the interactive frontend with GSAP animations and a FastAPI backend that handled inference and streaming responses, producing a project that appealed to both technical and non-technical judges.",
         link: "#",
     },
 ];
@@ -28,10 +37,7 @@ const projects = [
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
-        />
+
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
@@ -83,29 +89,52 @@ const projects = [
         <!-- Projects Section -->
         <section class="section">
             <div class="container">
-                <div class="columns is-multiline">
+                <div class="projects-list">
                     {
-                        projects.map((project) => (
-                            <div class="column is-4">
-                                <div class="card">
-                                    <div class="card-content">
-                                        <p class="title is-4 has-text-link">
-                                            {project.title}
-                                        </p>
-                                        <p class="content">
-                                            {project.description}
-                                        </p>
+                        projects.map((p) => (
+                            <article class="card">
+                                <div class="card-content">
+                                    <div class="project-row">
+                                        {p.icon ? (
+                                            <img
+                                                src={p.icon}
+                                                alt={`${p.title} icon`}
+                                                class="project-icon"
+                                            />
+                                        ) : null}
+                                        <div class="project-body">
+                                            <h3 class="project-title">
+                                                {p.title}
+                                            </h3>
+                                            <div class="project-meta">
+                                                <span class="project-dates">
+                                                    {p.dates}
+                                                </span>
+                                            </div>
+                                            <div class="project-tags">
+                                                {p.stack &&
+                                                    p.stack
+                                                        .split(",")
+                                                        .map((s) => (
+                                                            <span class="tag">
+                                                                {s.trim()}
+                                                            </span>
+                                                        ))}
+                                            </div>
+                                            <p class="project-description">
+                                                {p.description}
+                                            </p>
+                                        </div>
                                     </div>
-                                    <footer class="card-footer">
-                                        <a
-                                            href={project.link}
-                                            class="card-footer-item has-text-link"
-                                        >
+                                </div>
+                                {p.link && (
+                                    <div class="card-footer">
+                                        <a href={p.link} class="button">
                                             View Project
                                         </a>
-                                    </footer>
-                                </div>
-                            </div>
+                                    </div>
+                                )}
+                            </article>
                         ))
                     }
                 </div>

@@ -1,16 +1,14 @@
 ---
 const pageTitle = "Resume";
 // We no longer need to import the .md file
+import "../styles/global.css";
 ---
 
 <html lang="en">
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
-        />
+
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
@@ -57,9 +55,9 @@ const pageTitle = "Resume";
         <section class="section">
             <div class="container content">
                 <div class="has-text-centered" style="margin-bottom: 1.5rem;">
-                    <a 
-                        href="/resume.pdf" 
-                        download="DevinShende_Resume.pdf" 
+                    <a
+                        href="/resume.pdf"
+                        download="DevinShende_Resume.pdf"
                         class="button is-link is-large"
                     >
                         Download Resume (PDF)
@@ -72,11 +70,10 @@ const pageTitle = "Resume";
                     width="100%"
                     style="border: none; min-height: 80vh;"
                 >
-                    Your browser does not support embedded PDFs. 
-                    Please <a href="/resume.pdf">download the PDF</a> to view it.
+                    Your browser does not support embedded PDFs. Please <a
+                    href="/resume.pdf">download the PDF</a> to view it.
                 </iframe>
-                
-                </div>
+            </div>
         </section>
     </body>
 </html>

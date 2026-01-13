@@ -67,6 +67,7 @@ nav a:hover {
 nav .navbar-end .navbar-item {
     margin-left: 18px;
 }
+
 nav .navbar-end .navbar-item:first-child {
     margin-left: 0;
 }

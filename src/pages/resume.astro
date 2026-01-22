@@ -29,34 +29,37 @@ import "../styles/global.css";
                 <div class="navbar-menu is-active">
                     <div class="navbar-end">
                         <a class="navbar-item has-text-link" href="/">Home</a>
-                        <a class="navbar-item has-text-link" href="/about"
-                            >About</a
+                        <a class="navbar-item has-text-link" href="/projects"
+                            >Projects</a
                         >
                         <a
                             class="navbar-item has-text-link is-active"
                             href="/resume">Resume</a
-                        >
-                        <a class="navbar-item has-text-link" href="/projects"
-                            >Projects</a
                         >
                     </div>
                 </div>
             </div>
         </nav>
 
-        <section class="hero is-dark is-medium">
-            <div class="hero-body">
-                <div class="container has-text-centered">
+        <section class="hero is-dark is-medium" style="padding-bottom: 0;">
+            <div class="hero-body" style="padding-bottom: 0;">
+                <div
+                    class="container has-text-centered"
+                    style="padding-bottom: 0;"
+                >
                     <h1 class="title is-1 has-text-weight-bold">Resume</h1>
                 </div>
             </div>
         </section>
 
-        <section class="section">
-            <div class="container content">
+        <section class="section" style="padding-top: 0;">
+            <div
+                class="container content"
+                style="padding-top: 0; padding-bottom: 24px;"
+            >
                 <div class="has-text-centered" style="margin-bottom: 1.5rem;">
                     <a
-                        href="/src/content/resume.pdf"
+                        href="/resume.pdf"
                         download="DevinShende_Resume.pdf"
                         class="button is-link is-large"
                     >
@@ -64,7 +67,7 @@ import "../styles/global.css";
                     </a>
                 </div>
                 <iframe
-                    src="src/content/resume.pdf"
+                    src="/resume.pdf"
                     title={pageTitle}
                     width="100%"
                     style="border: none; min-height: 80vh;"

@@ -11,11 +11,12 @@ const projects = [
         dates: "Jun 2024 – Present",
         stack: "Flutter",
         description:
-            "I co-founded EventMap and served as lead developer on a four-person team building a mobile app to discover ongoing events across campus. We incorporated EventMap LLC, filed a patent, and published the app on the Apple App Store. I led the Flutter implementation, feature planning, and user testing, building geolocation-based discovery and RSVP flows to help students find activities quickly.",
+            "I co-founded EventMap and served as lead frontend developer on a four-person team building a mobile app to discover ongoing events across campus. We incorporated EventMap LLC, filed a patent, and published the app on the Apple App Store. I led the Flutter implementation, feature planning, and user testing, building geolocation-based discovery and RSVP flows to help students find activities quickly.",
         link: "#",
     },
     {
         title: "Hurricane Damage",
+        icon: "/katrina.jpg",
         dates: "Oct 2024 – Dec 2024",
         stack: "Python, Keras",
         description:
@@ -24,6 +25,7 @@ const projects = [
     },
     {
         title: "NewSense",
+        icon: "/nlp.png",
         dates: "Nov 2025",
         stack: "PyTorch, spaCy, FastAPI, GSAP",
         description:
@@ -59,15 +61,12 @@ const projects = [
                 <div class="navbar-menu is-active">
                     <div class="navbar-end">
                         <a class="navbar-item has-text-link" href="/">Home</a>
-                        <a class="navbar-item has-text-link" href="/about"
-                            >About</a
-                        >
-                        <a class="navbar-item has-text-link" href="/resume"
-                            >Resume</a
-                        >
                         <a
                             class="navbar-item has-text-link is-active"
                             href="/projects">Projects</a
+                        >
+                        <a class="navbar-item has-text-link" href="/resume"
+                            >Resume</a
                         >
                     </div>
                 </div>
@@ -75,9 +74,12 @@ const projects = [
         </nav>
 
         <!-- Hero Section -->
-        <section class="hero is-dark is-medium">
-            <div class="hero-body">
-                <div class="container has-text-centered">
+        <section class="hero is-dark is-medium" style="padding-bottom: 0;">
+            <div class="hero-body" style="padding-bottom: 0;">
+                <div
+                    class="container has-text-centered"
+                    style="padding-bottom: 0;"
+                >
                     <h1 class="title is-1 has-text-weight-bold">Projects</h1>
                     <h2 class="subtitle is-4 has-text-grey-lighter">
                         Some of my work and experiments
@@ -87,8 +89,8 @@ const projects = [
         </section>
 
         <!-- Projects Section -->
-        <section class="section">
-            <div class="container">
+        <section class="section" style="padding-top: 0;">
+            <div class="container" style="padding-top: 0;">
                 <div class="projects-list">
                     {
                         projects.map((p) => (

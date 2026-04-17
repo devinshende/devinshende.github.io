@@ -1,4 +1,4 @@
 # To run it
 `npm run dev`
 
-[https://devinshende.github.io](website)
+[link to live site](https://devinshende.github.io)
